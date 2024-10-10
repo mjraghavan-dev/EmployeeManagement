@@ -1,0 +1,61 @@
+.sideNavBarParent {
+    height: 100vh;
+    background: var(--side-nav-background-color);
+    position: fixed;
+    overflow-y: scroll;
+}
+
+.sideNavBarParent::-webkit-scrollbar {
+    display: none;
+}
+
+.headerParent {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 2px 8px 0px rgba(0, 56, 99, 0.20);
+    width: 100%;
+    /* z-index: 99; */
+}
+
+.headerParent header {
+    background: linear-gradient(to right, #ff4b2b, #ff416c) !important;
+}
+
+.MainBodyChildDiv {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: calc(100%);
+    height: calc(100% - 60px);
+    padding: 20px;
+    background: var(--default-app-background-color);
+    overflow-y: scroll;
+}
+
+.MainBodyChildDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.toggledHeaderParent,
+.toggledMainBodyChildDiv {
+    width: calc(100% - 60px);
+    left: 70PX;
+}
+
+
+@media screen and (max-width: 769px) {
+    .sideNavBarParent {
+        display: none;
+    }
+
+    .headerParent {
+        width: 100%;
+        left: 0;
+    }
+
+    .MainBodyChildDiv {
+        width: 100%;
+        left: 0;
+    }
+}
